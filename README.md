@@ -1,6 +1,6 @@
 # KotlinUsbTerminal
 
-This repository is an attempt to convert Kai Morich's SimpleUsbTerminal app to Kotlin, mostly as an attempt to better understand how usb-serial-for-android works.
+This repository is an attempt to convert Kai Morich's SimpleUsbTerminal app to Kotlin.  For the most part, this has just been to gain experience with usb-serial-for-android and to get a better understanding of the library's SerialInputOutputManager interface.
 
 ## Credits:
 SimpleUsbTerminal\
