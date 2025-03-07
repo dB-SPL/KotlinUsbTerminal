@@ -1,4 +1,4 @@
-package de.kai_morich.simple_usb_terminal
+package com.db-spl.kotlin-usb-terminal
 
 object Constants {
     // values have to be globally unique
