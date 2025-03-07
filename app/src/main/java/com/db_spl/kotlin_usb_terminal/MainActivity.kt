@@ -1,4 +1,4 @@
-package com.db-spl.kotlin-usb-terminal
+package com.db_spl.kotlin_usb_terminal
 
 import android.content.Intent
 import android.os.Bundle
