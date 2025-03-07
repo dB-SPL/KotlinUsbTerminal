@@ -3,9 +3,9 @@ plugins {
 }
 
 android {
-    compileSdkVersion 3t
+    compileSdkVersion 35
     defaultConfig {
-        targetSdkVersion 3t
+        targetSdkVersion 35
         minSdkVersion 19
         vectorDrawables.useSupportLibrary true
 
