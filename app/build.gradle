@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 34
+    compileSdkVersion 3t
     defaultConfig {
-        targetSdkVersion 34
+        targetSdkVersion 3t
         minSdkVersion 19
         vectorDrawables.useSupportLibrary true
 
-        applicationId "com.db-spl.kotlin-usb-terminal.com
+        applicationId "com.db_spl.kotlin_usb_terminal.com
         versionCode 1
         versionName "1.0"
     }
@@ -23,7 +23,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    namespace 'com.db-spl.kotlin-usb-terminal.com'
+    namespace 'com.db_spl.kotlin_usb_terminal.com'
 }
 
 dependencies {
