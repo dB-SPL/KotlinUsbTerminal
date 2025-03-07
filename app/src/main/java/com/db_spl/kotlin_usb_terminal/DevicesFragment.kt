@@ -2,7 +2,6 @@ package com.db_spl.kotlin_usb_terminal
 
 import android.app.AlertDialog
 import android.content.Context
-import android.content.DialogInterface
 import android.hardware.usb.UsbDevice
 import android.hardware.usb.UsbManager
 import android.os.Bundle
@@ -23,7 +22,8 @@ class DevicesFragment : ListFragment() {
 
     private val listItems = ArrayList<ListItem>()
     private lateinit var listAdapter: ArrayAdapter<ListItem>
-    private var baudRate = 19200
+    private var baudRate = 9600
+    private var stopBits = 2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -99,6 +99,23 @@ class DevicesFragment : ListFragment() {
                 builder.setTitle("Baud rate")
                 builder.setSingleChoiceItems(baudRates, pos) { dialog, which ->
                     baudRate = baudRates[which].toInt()
+                    dialog.dismiss()
+                }
+                builder.create().show()
+                true
+            }
+            R.id.stopBitsMenuItem -> {
+                val stopBitsNames = resources.getStringArray(R.array.stopbits_names)
+                val pos = stopBitsNames.indexOf(stopBits.toString())
+                val builder = AlertDialog.Builder(requireActivity())
+                builder.setTitle("Stop bits")
+                builder.setSingleChoiceItems(stopBits, pos) { dialog, which ->
+                    val stopBitsString = stopBitsNames[which]
+                    if (stopBitsString == "1.5") {
+                        stopBits = 3
+                    } else {
+                        stopBits = stopBitsString.toInt()
+                    }
                     dialog.dismiss()
                 }
                 builder.create().show()

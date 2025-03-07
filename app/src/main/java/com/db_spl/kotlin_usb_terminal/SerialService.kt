@@ -110,18 +110,18 @@ class SerialService : Service(), SerialListener {
         // deliver messages queued before + after attach
         for (item in queue1) {
             when (item.type) {
-                QueueType.Connect       -> listener?.onSerialConnect()
-                QueueType.ConnectError  -> listener?.onSerialConnectError(item.e!!)
-                QueueType.Read          -> listener?.onSerialRead(item.datas!!)
-                QueueType.IoError       -> listener?.onSerialIoError(item.e!!)
+                QueueType.Connect -> listener?.onSerialConnect()
+                QueueType.ConnectError -> listener?.onSerialConnectError(item.e!!)
+                QueueType.Read -> listener?.onSerialRead(item.datas!!)
+                QueueType.IoError -> listener?.onSerialIoError(item.e!!)
             }
         }
         for (item in queue2) {
             when (item.type) {
-                QueueType.Connect       -> listener?.onSerialConnect()
-                QueueType.ConnectError  -> listener?.onSerialConnectError(item.e!!)
-                QueueType.Read          -> listener?.onSerialRead(item.datas!!)
-                QueueType.IoError       -> listener?.onSerialIoError(item.e!!)
+                QueueType.Connect -> listener?.onSerialConnect()
+                QueueType.ConnectError -> listener?.onSerialConnectError(item.e!!)
+                QueueType.Read -> listener?.onSerialRead(item.datas!!)
+                QueueType.IoError -> listener?.onSerialIoError(item.e!!)
             }
         }
         queue1.clear()
