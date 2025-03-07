@@ -1,4 +1,4 @@
-package com.db-spl.kotlin-usb-terminal
+package com.db_spl.kotlin_usb_terminal
 
 import com.hoho.android.usbserial.driver.FtdiSerialDriver
 import com.hoho.android.usbserial.driver.ProbeTable
